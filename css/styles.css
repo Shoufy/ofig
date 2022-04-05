@@ -1,0 +1,21 @@
+html {
+    font-size: 1.3em;
+    /* ici je mets mes variables ré utilisable */
+    --fontFamily: 'Raleway', sans-serif;
+    --redColor: #c80000;
+    --greyColor: #666;
+    --greyLightColor: #ccc;
+}
+
+body {
+    font-family: var(--fontFamily);
+}
+
+.container {
+    background-color: yellow;
+}
+
+.header {
+    background-color: var(--redColor);
+    padding: 2rem;
+}
