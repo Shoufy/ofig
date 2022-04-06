@@ -5,6 +5,7 @@ html {
     --redColor: #c80000;
     --greyColor: #666;
     --greyLightColor: #ccc;
+    /* les tailles */
     --paddingDefaut: 1.5rem;
     --sizeEmDefaut: 0.8em;
 }
@@ -41,12 +42,12 @@ body {
     text-align: center;
 }
 
-.title__italic {
+.title--italic {
     font-style: italic;
     font-size: calc(var(--sizeEmDefaut)*1.5);
 }
 
-.main {
+.cards__container {
     display: flex;
 
 }
