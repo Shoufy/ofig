@@ -56,4 +56,10 @@ body {
     padding: calc(var(--paddingDefaut)/2);
     color: white;
     text-align: center;
+    font-size: var(--sizeEmDefaut);
+    /* put the footer at the bottom of the page : */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
