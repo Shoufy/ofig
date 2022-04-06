@@ -6,6 +6,7 @@ html {
     --greyColor: #666;
     --greyLightColor: #ccc;
     --paddingDefaut: 1.5rem;
+    --sizeEmDefaut: 0.8em;
 }
 
 body {
@@ -23,12 +24,12 @@ body {
 }
 
 .header__ofig {
-    font-size: 2em;
+    font-size: calc(var(--sizeEmDefaut)*2.5);
     font-weight: bold;
 }
 
 .header__suffix {
-    font-size: 0.8em;
+    font-size: var(--sizeEmDefaut);
     font-weight: bold;
 }
 
@@ -38,7 +39,11 @@ body {
     padding: calc(var(--paddingDefaut)/2);
     color: white;
     text-align: center;
+}
 
+.title__italic {
+    font-style: italic;
+    font-size: calc(var(--sizeEmDefaut)*1.5);
 }
 
 .main {
