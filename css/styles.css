@@ -57,6 +57,7 @@ body {
     border: 1px solid var(--greyLightColor);
     margin: 1.3rem var(--marginDefaut);
     padding: calc(var(--paddingDefaut)*0.4);
+    width: 25%;
 }
 
 .card__picture {
