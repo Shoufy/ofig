@@ -5,6 +5,7 @@ html {
     --redColor: #c80000;
     --greyColor: #666;
     --greyLightColor: #ccc;
+    --paddingDefaut: 1.5rem;
 }
 
 body {
@@ -17,5 +18,37 @@ body {
 
 .header {
     background-color: var(--redColor);
-    padding: 2rem;
+    padding: var(--paddingDefaut);
+    color: white;
+}
+
+.header__ofig {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header__suffix {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+
+.title {
+    background-color: #666;
+    padding: calc(var(--paddingDefaut)/2);
+    color: white;
+    text-align: center;
+
+}
+
+.main {
+    display: flex;
+
+}
+
+.footer {
+    background-color: var(--greyColor);
+    padding: calc(var(--paddingDefaut)/2);
+    color: white;
+    text-align: center;
 }
