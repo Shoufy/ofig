@@ -9,10 +9,16 @@ html {
     --paddingDefaut: 1.5rem;
     --sizeEmDefaut: 0.8em;
     --marginDefaut: 0.7rem;
+    
 }
 
 body {
     font-family: var(--fontFamily);
+}
+
+.container {
+    position: relative;
+    min-height: 100%;
 }
 
 .header {
@@ -30,7 +36,6 @@ body {
     font-size: var(--sizeEmDefaut);
     font-weight: bold;
 }
-
 
 .title {
     background-color: #666;
@@ -50,18 +55,19 @@ body {
     box-sizing: border-box;
     /* margin: 0 4rem; */
     flex-wrap: wrap;
-    min-height: 100vh;;
+    /* min-height: 100vh; */
 }
 
 .card__container {
     border: 1px solid var(--greyLightColor);
     margin: 1.3rem var(--marginDefaut);
     padding: calc(var(--paddingDefaut)*0.4);
-    width: 25%;
+    margin-bottom: 4rem;
 }
 
 .card__picture {
     width: 100%;
+    height: auto;
 }
 
 .card__title {
@@ -87,7 +93,7 @@ body {
     margin-top: var(--marginDefaut);
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .card__oldPrice {
@@ -106,8 +112,254 @@ body {
     text-align: center;
     font-size: var(--sizeEmDefaut);
     /* put the footer at the bottom of the page : */
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     width: 100%;
+    /* margin-top: auto; */
+}
 
+/* responsive */
+
+@media (max-width: 1688px) {
+    .card__container {
+        width: 30%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1394px) {
+    .card__title {
+        font-size: var(--sizeEmDefaut);
+    }
+    .card__name {
+        font-size: calc(var(--sizeEmDefaut)*1.5);
+        padding-top: calc(var(--paddingDefaut)*0.5);
+    }
+
+    .card__content {
+        font-size: var(--sizeEmDefaut);
+    }
+    .card__basket {
+        padding: calc(var(--paddingDefaut)*0.5);
+        margin-top: calc(var(--marginDefaut)*0.5);
+    }
+    .card__oldPrice {
+        font-size: var(--sizeEmDefaut);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1.2);
+    }
+
+}
+
+@media (max-width: 1155px) {
+    .header {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+        padding: calc(var(--paddingDefaut)*0.9);
+
+    }
+    .title {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+        padding: calc(var(--paddingDefaut)/3);
+    }
+
+    .footer {
+        padding: calc(var(--paddingDefaut)/3);
+    } 
+    .card__container {
+        width: 34%;
+        height: 100%;
+        margin-bottom: 0.8rem;
+    }
+    .card__container--margin {
+        width: 34%;
+        height: 100%;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card__container {
+        width: 43%;
+        height: 100%;
+        margin-bottom: 0.1rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3.5rem;
+    }
+}
+
+@media (max-width: 809px) {
+    .card__title {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__content {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__basket {
+        padding: calc(var(--paddingDefaut)*0.4);
+        margin-top: calc(var(--marginDefaut)*0.4);
+    }
+    .card__oldPrice {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .card__container {
+        width: 45%;
+        height: 100%;
+        margin-bottom: 0.1rem;
+    }
+}
+
+
+@media (max-width: 711px) {
+    .card__title {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+    }
+    .card__content {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+    }
+    .card__basket {
+        padding: calc(var(--paddingDefaut)*0.3);
+        margin-top: calc(var(--marginDefaut)*0.3);
+    }
+    .card__oldPrice {
+        font-size: calc(var(--sizeEmDefaut)*0.7);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1);
+    }
+}
+
+@media (max-width: 648px) {
+    .card__container {
+        width: 80%;
+        height: 100%;
+        margin-bottom: 0.8rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .card__container {
+        width: 80%;
+        height: 100%;
+        margin-bottom: 0.1rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3.5rem;
+    }
+}
+
+@media (max-width: 515px) {
+    .card__container {
+        width: 80%;
+        height: auto;
+        margin-bottom: 0.3rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3rem;
+    }
+    .card__title {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__name {
+        font-size: calc(var(--sizeEmDefaut)*1.1);
+        padding-top: calc(var(--paddingDefaut)*0.5);
+    }
+
+    .card__content {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__basket {
+        font-size: calc(var(--sizeEmDefaut)*0.95);
+        padding: calc(var(--paddingDefaut)*0.5);
+        margin-top: calc(var(--marginDefaut)*0.5);
+    }
+    .card__oldPrice {
+        font-size: var(--sizeEmDefaut);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1.2);
+    }
+}
+
+@media (max-width: 360px) {
+    .card__container {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0.1rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3.5rem;
+    }
+    .card__title {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__name {
+        font-size: calc(var(--sizeEmDefaut)*1.1);
+        padding-top: calc(var(--paddingDefaut)*0.5);
+    }
+
+    .card__content {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    .card__basket {
+        font-size: calc(var(--sizeEmDefaut)*0.95);
+        padding: calc(var(--paddingDefaut)*0.5);
+        margin-top: calc(var(--marginDefaut)*0.5);
+    }
+    .card__oldPrice {
+        font-size: var(--sizeEmDefaut);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1.2);
+    }
+}
+
+@media (max-width: 280px) {
+    .card__container {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0.1rem;
+    }
+    .card__container--margin {
+        margin-bottom: 3.5rem;
+    }
+
+    .card__title {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+    }
+    .card__name {
+        font-size: calc(var(--sizeEmDefaut)*1);
+        padding-top: calc(var(--paddingDefaut)*0.4);
+    }
+
+    .card__content {
+        font-size: calc(var(--sizeEmDefaut)*0.8);
+    }
+    .card__basket {
+        font-size: calc(var(--sizeEmDefaut)*0.90);
+        padding: calc(var(--paddingDefaut)*0.4);
+        margin-top: calc(var(--marginDefaut)*0.4);
+    }
+    .card__oldPrice {
+        font-size: calc(var(--sizeEmDefaut)*0.9);
+    }
+    
+    .card__price {
+        font-size: calc(var(--sizeEmDefaut)*1.1);
+    }
 }
