@@ -8,14 +8,11 @@ html {
     /* les tailles */
     --paddingDefaut: 1.5rem;
     --sizeEmDefaut: 0.8em;
+    --marginDefaut: 0.7rem;
 }
 
 body {
     font-family: var(--fontFamily);
-}
-
-.container {
-    background-color: yellow;
 }
 
 .header {
@@ -34,7 +31,6 @@ body {
     font-weight: bold;
 }
 
-
 .title {
     background-color: #666;
     padding: calc(var(--paddingDefaut)/2);
@@ -50,7 +46,12 @@ body {
 .cards__container {
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+}
 
+.card__container {
+    border: 0.1rem solid var(--greyLightColor);
+    margin: 1.3rem var(--marginDefaut);
 }
 
 .footer {
