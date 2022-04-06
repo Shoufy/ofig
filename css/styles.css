@@ -31,6 +31,7 @@ body {
     font-weight: bold;
 }
 
+
 .title {
     background-color: #666;
     padding: calc(var(--paddingDefaut)/2);
@@ -47,11 +48,54 @@ body {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
+    /* margin: 0 4rem; */
+    flex-wrap: wrap;
+    min-height: 100vh;;
 }
 
 .card__container {
-    border: 0.1rem solid var(--greyLightColor);
+    border: 1px solid var(--greyLightColor);
     margin: 1.3rem var(--marginDefaut);
+    padding: calc(var(--paddingDefaut)*0.4);
+}
+
+.card__picture {
+    width: 100%;
+}
+
+.card__title {
+    color: var(--greyLightColor);
+    margin: var(--marginDefaut);
+    text-transform: uppercase;
+}
+
+.card__name {
+    font-size: calc(var(--sizeEmDefaut)*2);
+    font-weight: bold;
+    border-top: 2px solid var(--greyLightColor);
+    padding-top: var(--paddingDefaut)
+}
+
+.card__content {
+    margin-top: 0.5rem;
+}
+
+.card__basket {
+    background-color: var(--redColor);
+    padding: var(--paddingDefaut);
+    margin-top: var(--marginDefaut);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__oldPrice {
+    text-decoration: line-through;
+}
+
+.card__price {
+    font-weight: bold;
+    font-size: calc(var(--sizeEmDefaut)*1.5);
 }
 
 .footer {
@@ -61,7 +105,7 @@ body {
     text-align: center;
     font-size: var(--sizeEmDefaut);
     /* put the footer at the bottom of the page : */
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 
